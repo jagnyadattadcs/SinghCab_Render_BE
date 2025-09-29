@@ -9,7 +9,7 @@ import adminRoutes from "./routes/admin.js";
 import bookingRoutes from "./routes/bookingRoutes.js"; // <-- Import new routes
 import getCarDetailsRoutes from "./routes/getCarDetails.js"; // <-- Import car routes
 import emailRoutes from "./routes/emailroutes.js";
-const fetch = require('node-fetch'); // ✅ For node-fetch v2
+import fetch from 'node-fetch'; // ✅ For node-fetch v2
 
 dotenv.config();
 connectDB();
