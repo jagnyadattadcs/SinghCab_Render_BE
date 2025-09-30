@@ -18,21 +18,20 @@
 
 // export default mongoose.model("SelfDriveBooking", selfDriveBookingSchema);
 
-
 import mongoose from "mongoose";
 
 const selfDriveBookingSchema = new mongoose.Schema(
   {
     carType: { type: String, required: true },
-    carModel: { type: String, required: true },
-    duration: { type: Number, required: true },
-    license: { type: String, required: true },
-    dob: { type: Date, required: true },
-    adhar: { type: String, required: true },
-    location: { type: String, required: true },
+    carModel: { type: String },
+    duration: { type: Number },
+    license: { type: String },
+    dob: { type: Date },
+    adhar: { type: String },
+    location: { type: String },
     pricePerHour: { type: Number },
     name: { type: String, required: true },
-    email: { type: String, required: true },
+    email: { type: String },
     phone: { type: String, required: true },
   },
   { timestamps: true }
