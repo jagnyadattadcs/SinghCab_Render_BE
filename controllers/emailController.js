@@ -5,10 +5,12 @@ export const sendEmail = async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465, // or 587
+      secure: true, // true for 465, false for 587
       auth: {
-        user: process.env.ADMIN_EMAIL, // admin email
-        pass: process.env.ADMIN_PASS, // app password
+        user: process.env.ADMIN_EMAIL,
+        pass: process.env.ADMIN_PASS, // Gmail App Password
       },
     });
 
